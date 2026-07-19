@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="flex flex-1 h-screen">
       <div
-        className="hidden lg:flex h-screen w-full bg-cover bg-center flex-col"
+        className="hidden lg:flex h-screen w-full bg-cover backdrop bg-center flex-col "
         style={{ backgroundImage: `url(${HeroSectionImage})` }}
       >
         <div className="w-full h-full flex flex-col bg-black/5 p-3">

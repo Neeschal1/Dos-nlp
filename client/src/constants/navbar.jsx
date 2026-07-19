@@ -33,7 +33,7 @@ const Navbar = ({ textColor = "white", logo = Logo }) => {
     <div className="flex flex-row items-center justify-between w-full p-4 gap-4 bg-transparent">
       {" "}
       <img className="h-15 w-15" src={logo} alt="Logo" />{" "}
-      <div className="flex bg-white/5 backdrop- p-2 border-t border-b border-r border-white/30 shadow-lg rounded-full items-center gap-3">
+      <div className="flex bg-white/5 backdrop p-2 border-t border-b border-r border-white/30 shadow-lg rounded-full items-center gap-3">
         {navItems.map((item) => (
           <button
             style={Fonts.poppins.light}
