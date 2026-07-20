@@ -13,7 +13,7 @@ const StatsCard = ({ end, suffix = "", title }) => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center p-8">
+    <div className="flex flex-col items-center justify-center bg-white p-8">
       <div
         className="flex items-baseline text-[#FF090C]"
         style={{
