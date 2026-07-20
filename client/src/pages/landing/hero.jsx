@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroSectionImage from "./../../assets/images/hero.jpg";
 import Navbar from "../../constants/navbar";
 import Fonts from "../../utils/fontsconfig";
 import Users from "../../assets/images/users.png";
+import KoreanLanguage from "../../assets/images/koreanLanguage.jpg";
+import GermanLanguage from "../../assets/images/germanLanguage.jpg";
+import ComputerClasses from "../../assets/images/computerClasses.jpg";
+import AccountingTraining from "../../assets/images/accountingTraining.jpg";
 
 const Hero = () => {
+  const backgroundImages = [
+    HeroSectionImage,
+    KoreanLanguage,
+    GermanLanguage,
+    ComputerClasses,
+    AccountingTraining,
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    console.log(backgroundImages);
+    const handleInterval = setInterval(() => {
+      setCurrentImage((previous) => (previous + 1) % backgroundImages.length);
+    }, 5000);
+
+    return () => clearInterval(handleInterval);
+  }, [backgroundImages.length]);
   return (
     <div className="flex flex-1 h-screen">
       <div
-        className="hidden lg:flex h-screen w-full bg-cover backdrop bg-center flex-col "
-        style={{ backgroundImage: `url(${HeroSectionImage})` }}
+        className="h-screen w-full bg-black bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${backgroundImages[currentImage]})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="w-full h-full flex flex-col bg-black/5 p-3">
+        <div className="w-full h-full flex flex-col bg-black/30 p-3">
           <Navbar />
 
           {/* Center contents */}
@@ -46,7 +72,7 @@ const Hero = () => {
                   style={Fonts.poppins.regular}
                   className="border border-[#F2F1FF] hover:border-black text-white px-10 py-4 rounded-4xl hover:bg-[#000000] duration-300 cursor-pointer"
                 >
-                  Enroll your Admission 
+                  Enroll your Admission
                 </button>
               </div>
             </div>
@@ -62,9 +88,12 @@ const Hero = () => {
             </div>
             <div className="py-6 px-10 bg-black/15 backdrop-blur-xs rounded-3xl border-t border-r border-white/30">
               <h3 style={Fonts.poppins.light} className="text-white text-right">
-                We help you build practical skills that open doors to global career opportunities.
-                <br /> From professional accounting and IT training to German and Korean
-                <br /> language courses, we provide industry-focused education and job
+                We help you build practical skills that open doors to global
+                career opportunities.
+                <br /> From professional accounting and IT training to German
+                and Korean
+                <br /> language courses, we provide industry-focused education
+                and job
                 <br /> placement support to help you achieve your career goals.
               </h3>
             </div>
