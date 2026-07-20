@@ -1,0 +1,276 @@
+import React, { useState } from "react";
+import Fonts from "../../utils/fontsconfig";
+
+import Student1 from "../../assets/images/student1.jpg";
+import Student2 from "../../assets/images/student2.jpg";
+import Student3 from "../../assets/images/student3.jpg";
+import Student4 from "../../assets/images/student4.jpg";
+import Student5 from "../../assets/images/student5.jpg";
+import Student6 from "../../assets/images/student6.jpg";
+import Student7 from "../../assets/images/student7.jpg";
+
+const Stories = () => {
+  const studentsStories = [
+    {
+      id: 1,
+      image: Student1,
+      name: "Jessica Tamang",
+      title: "Accounting Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills.",
+    },
+    {
+      id: 2,
+      image: Student2,
+      name: "Emily Smith",
+      title: "German Language",
+      address: "Millanchowk, Butwal",
+      description:
+        "After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective.",
+    },
+    {
+      id: 3,
+      image: Student3,
+      name: "David Lee",
+      title: "Computer Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "The Computer Training course provided practical experience in modern software and office applications. Within a few months, I secured my first internship at a software company.",
+    },
+    {
+      id: 4,
+      image: Student4,
+      name: "Sujan Sharma",
+      title: "Korean Language",
+      address: "Millanchowk, Butwal",
+      description:
+        "Preparing for TOPIK was challenging, but the dedicated instructors and supportive environment helped me achieve my target score and begin my career in South Korea.",
+    },
+    {
+      id: 5,
+      image: Student5,
+      name: "Rita KC",
+      title: "Accounting Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "The hands-on accounting projects and professional mentorship helped me gain practical experience. I received multiple job offers immediately after completing the course.",
+    },
+    {
+      id: 6,
+      image: Student6,
+      name: "Aakash Sharma",
+      title: "IT Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
+    },
+    {
+      id: 7,
+      image: Student7,
+      name: "Aakash Sharma",
+      title: "IT Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
+    },
+    {
+      id: 8,
+      image: Student1,
+      name: "Jessica Tamang",
+      title: "Accounting Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills.",
+    },
+    {
+      id: 9,
+      image: Student2,
+      name: "Emily Smith",
+      title: "German Language",
+      address: "Millanchowk, Butwal",
+      description:
+        "After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective.",
+    },
+    {
+      id: 10,
+      image: Student3,
+      name: "David Lee",
+      title: "Computer Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "The Computer Training course provided practical experience in modern software and office applications. Within a few months, I secured my first internship at a software company.",
+    },
+    {
+      id: 11,
+      image: Student4,
+      name: "Sujan Sharma",
+      title: "Korean Language",
+      address: "Millanchowk, Butwal",
+      description:
+        "Preparing for TOPIK was challenging, but the dedicated instructors and supportive environment helped me achieve my target score and begin my career in South Korea.",
+    },
+    {
+      id: 12,
+      image: Student5,
+      name: "Rita KC",
+      title: "Accounting Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "The hands-on accounting projects and professional mentorship helped me gain practical experience. I received multiple job offers immediately after completing the course.",
+    },
+    {
+      id: 13,
+      image: Student6,
+      name: "Aakash Sharma",
+      title: "IT Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
+    },
+    {
+      id: 14,
+      image: Student7,
+      name: "Aakash Sharma",
+      title: "IT Training",
+      address: "Millanchowk, Butwal",
+      description:
+        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
+    },
+  ];
+
+  const [visibleCount, setVisibleCount] = useState(6);
+  const [selectedStory, setSelectedStory] = useState(null);
+
+  const visibleStories = studentsStories.slice(0, visibleCount);
+
+  return (
+    <div id="stories-section" className="flex flex-1 bg-white items-center justify-center flex-col w-full py-16">
+      <div className="flex flex-col items-center gap-5 mb-12">
+        <h3
+          className="bg-[#F2F1FF] py-2 px-4 rounded-full lg:w-fit text-center"
+          style={Fonts.poppins.regular}
+        >
+          EMPOWERING FUTURE PROFESSIONALS
+        </h3>
+        <h1
+          style={Fonts.poppins.medium}
+          className="xl:text-4xl text-3xl text-black text-center"
+        >
+          Transforming Skills into Successful Careers
+        </h1>
+      </div>
+
+      <div className="grid bg-white grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-6 gap-6 lg:gap-8 w-full">
+        {visibleStories.map((story) => (
+          <div
+            key={story.id}
+            className="group relative w-full h-80 rounded-3xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-500"
+          >
+            <img
+              src={story.image}
+              alt={story.name}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/45 group-hover:bg-black/30 transition-all duration-500"></div>
+
+            <div className="absolute top-7 left-7">
+              <span
+                style={Fonts.poppins.medium}
+                className="bg-[#FF090C] text-white px-5 py-2 rounded-full text-xs tracking-wider uppercase"
+              >
+                {story.title}
+              </span>
+            </div>
+
+            <div className="absolute bottom-7 left-7 right-7 text-white">
+              <h2
+                style={Fonts.poppins.medium}
+                className="text-2xl lg:text-3xl mb-2 transition-all duration-500 lg:group-hover:-translate-y-2"
+              >
+                {story.name}
+              </h2>
+              <p className="text-sm text-white/80 mb-4">{story.address}</p>
+              <button
+                onClick={() => setSelectedStory(story)}
+                className="bg-white cursor-pointer text-black px-5 py-3 rounded-full font-medium transition-all duration-500 hover:bg-[#FF090C] hover:text-white opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+              >
+                Learn More →
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {visibleCount < studentsStories.length && (
+        <div className="flex justify-center mt-14">
+          <button
+            onClick={() => setVisibleCount(studentsStories.length)}
+            style={Fonts.poppins.medium}
+            className="bg-black cursor-pointer text-white px-10 py-4 rounded-full hover:bg-[#FF090C] transition-all duration-300"
+          >
+            View All Stories
+          </button>
+        </div>
+      )}
+
+      {selectedStory && (
+        <div
+          onClick={() => setSelectedStory(null)}
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-5"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative bg-white rounded-3xl max-w-5xl w-full max-h-[85vh] overflow-hidden shadow-2xl"
+          >
+            <button
+              onClick={() => setSelectedStory(null)}
+              className="absolute top-5 right-5 z-20 h-12 w-12 rounded-full bg-white text-3xl leading-none hover:bg-[#FF090C] hover:text-white transition"
+            >
+              ×
+            </button>
+
+            <div className="grid lg:grid-cols-2 max-h-[85vh]">
+              <div className="h-64 lg:h-full">
+                <img
+                  src={selectedStory.image}
+                  alt={selectedStory.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="p-8 lg:p-12 flex flex-col overflow-y-auto max-h-[85vh]">
+                <span
+                  style={Fonts.poppins.regular}
+                  className="text-[#FF090C] uppercase tracking-[3px] text-sm"
+                >
+                  {selectedStory.title}
+                </span>
+
+                <h2
+                  style={Fonts.poppins.medium}
+                  className="text-4xl lg:text-5xl mt-4 text-black"
+                >
+                  {selectedStory.name}
+                </h2>
+
+                <p className="text-gray-400 text-sm mt-2">
+                  {selectedStory.address}
+                </p>
+
+                <p
+                  style={Fonts.poppins.regular}
+                  className="text-gray-600 leading-8 mt-8"
+                >
+                  {selectedStory.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Stories;

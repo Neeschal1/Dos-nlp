@@ -57,11 +57,18 @@ const SuccessStoriesHero = () => {
             <h3
               style={Fonts.poppins.regular}
               className="text-sm text-white/90 pt-3 leading-relaxed"
-            >Hear from students who transformed their careers through our expert training.
+            >
+              Hear from students who transformed their careers through our
+              expert training.
             </h3>
           </div>
           <button
             style={Fonts.poppins.regular}
+            onClick={() => {
+              document
+                .getElementById("stories-section")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="mt-8 bg-[#FF090C] text-white px-8 lg:px-10 py-4 rounded-full hover:bg-black transition-all duration-300 cursor-pointer"
           >
             View Success Stories
