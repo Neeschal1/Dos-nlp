@@ -4,7 +4,7 @@ import Fonts from "../utils/fontsconfig.js";
 import { useNavigate, useLocation } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
-const Navbar = ({ textColor = "white", logo = Logo }) => {
+const Navbar = ({ textColor = "white", logo = Logo, bordercolor = "white/30" }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = ({ textColor = "white", logo = Logo }) => {
 
   return (
     <div className="relative w-full">
-      <div className="flex flex-row items-center justify-between w-full p-4 gap-4 bg-transparent">
+      <div className="flex flex-row items-center justify-between w-full gap-4 bg-transparent">
         <img
           className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-40 object-contain shrink-0"
           src={logo}
@@ -53,7 +53,7 @@ const Navbar = ({ textColor = "white", logo = Logo }) => {
 
         {/* ------------------- Tablets/PC/Desktop------------------- */}
         <div className="hidden md:flex flex-1 items-center justify-between gap-4">
-          <div className="flex bg-white/5 backdrop-blur-xs p-2 border-t border-b border-r border-white/30 shadow-lg rounded-full items-center gap-1 lg:gap-3 mx-auto overflow-x-auto">
+          <div className={`flex bg-white/2 backdrop-blur-xs p-2 border-t border-b border-r border-${bordercolor} shadow-2xl rounded-4xl items-center gap-1 lg:gap-3 mx-auto overflow-x-auto`}>
             {navItems.map((item) => (
               <button
                 style={Fonts.poppins.light}
