@@ -65,7 +65,7 @@ const Faqs = () => {
   return (
     <div
       ref={scrollRef}
-      className={`flex flex-col md:flex-row mb-20 items-center justify-between gap-15  lg:px-10 lg:py-30 p-5 bg-[#F2F1FF] transition-all duration-700 ${
+      className={`flex flex-col md:flex-row mb-20 items-center justify-between gap-15  lg:px-10 lg:py-30 p-5 bg-white transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
@@ -110,7 +110,7 @@ const Faqs = () => {
           <div
             key={index}
             onClick={() => toggleOpen(index)}
-            className="bg-white rounded-2xl p-5 cursor-pointer transition-all duration-300 hover:bg-white/70"
+          className="bg-[#F8F8F8] rounded-2xl p-5 cursor-pointer transition-all duration-300 hover:bg-[#EBEBEB]"
           >
             <div className="flex justify-between items-start">
               <h3

@@ -3,6 +3,7 @@ import Hero from "./hero";
 import Statistics from "./statistics";
 import Services from "./services";
 import Faqs from "./faqs";
+import OurPeople from "./ourPeople";
 
 const Landing = () => {
   return (
@@ -11,6 +12,7 @@ const Landing = () => {
       <Statistics />
       <Services />
       <Faqs />
+      <OurPeople />
     </div>
   );
 };
