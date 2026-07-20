@@ -36,24 +36,37 @@ const Services = () => {
       subHeading: "Gain industry-ready accounting and finance expertise.",
     },
   ];
-  
+
   return (
-    <div className="flex flex-1 items-center justify-center p-10 flex-col">
+    <div className="flex flex-1 items-center justify-center px-10 py-30 flex-col">
       <div className="flex flex-col items-center">
-        <p style={Fonts.poppins.regular} className="text-[#FF090C]">
-          Innovative Solution
-        </p>
+        <h3
+          className="bg-white py-2 px-4 rounded-full lg:w-fit text-center"
+          style={Fonts.poppins.regular}
+        >
+          INNOVATIVE SOLUTION
+        </h3>
         <h1 style={Fonts.poppins.medium} className="xl:text-4xl text-black">
           Consulting Services
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-16 w-full max-w-7xl">
         {AvailableServices.map((service) => (
-          <div key={service.id} className="group relative h-80 rounded-3xl overflow-hidden cursor-pointer">
-            <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/>
+          <div
+            key={service.id}
+            className="group relative h-80 rounded-3xl overflow-hidden cursor-pointer"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+            />
             <div className="absolute inset-0 bg-black/45 group-hover:bg-black/30 transition-all duration-500"></div>
             <div className="absolute top-7 left-7">
-              <span style={Fonts.poppins.medium} className=" text-white px-6 py-2 rounded-full text-xs tracking-wider uppercase">
+              <span
+                style={Fonts.poppins.medium}
+                className=" text-white px-6 py-2 rounded-full text-xs tracking-wider uppercase"
+              >
                 {service.category}
               </span>
             </div>
@@ -64,11 +77,13 @@ const Services = () => {
               >
                 {service.title}
               </h2>
-              <p style={Fonts.poppins.regular} className="text-gray-200 leading-7 text-sm opacity-90">
+              <p
+                style={Fonts.poppins.regular}
+                className="text-gray-200 leading-7 text-sm opacity-90"
+              >
                 {service.subHeading}
               </p>
-              <button
-                className="mt-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 bg-white text-black px-5 py-3 rounded-full font-medium hover:bg-[#FF090C] hover:text-white">
+              <button className="mt-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 bg-white text-black px-5 py-3 rounded-full font-medium hover:bg-[#FF090C] hover:text-white">
                 Learn More →
               </button>
             </div>

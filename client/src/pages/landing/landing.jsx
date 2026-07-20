@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./hero";
 import Statistics from "./statistics";
 import Services from "./services";
+import Faqs from "./faqs";
 
 const Landing = () => {
   return (
@@ -9,6 +10,7 @@ const Landing = () => {
       <Hero />
       <Statistics />
       <Services />
+      <Faqs />
     </div>
   );
 };
