@@ -32,52 +32,62 @@ const OurPeople = () => {
       role: "Lyricist",
     },
   ];
+
   return (
-    <div className="flex flex-col pb-20 items-center justify-center">
-      <div className="flex flex-col items-center">
+    <section className="py-12 lg:py-20 bg-white lg:-mt-20 -mt-20">
+      <div className="flex flex-col items-center text-center px-4">
         <h3
-          className="bg-white py-2 px-4 rounded-full lg:w-fit text-center"
+          className="bg-white py-2 px-5 rounded-full border border-gray-200 text-sm lg:text-base"
           style={Fonts.poppins.regular}
         >
           MEET OUR PEOPLE
         </h3>
-        <h1 style={Fonts.poppins.medium} className="xl:text-4xl text-black">
+
+        <h1
+          style={Fonts.poppins.medium}
+          className="text-3xl lg:text-4xl xl:text-5xl text-black mt-4"
+        >
           Leading Experts
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-16 w-full max-w-7xl mx-auto">
-        {ourPerson.map((person) => (
-          <div
-            key={person.id}
-            className="group relative h-125 rounded-3xl overflow-hidden shadow-lg"
-          >
-            <img
-              src={person.image}
-              alt={person.name}
-              className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
-              <p style={Fonts.poppins.regular} className="uppercase tracking-[3px] text-sm text-gray-300">
-                {person.role}
-              </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 lg:mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+          {ourPerson.map((person) => (
+            <div
+              key={person.id}
+              className="group relative h-105 sm:h-115 lg:h-125 rounded-3xl overflow-hidden shadow-lg"
+            >
+              <img
+                src={person.image}
+                alt={person.name}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-7 text-white">
+                <p
+                  style={Fonts.poppins.regular}
+                  className="uppercase tracking-[3px] text-xs lg:text-sm text-gray-300"
+                >
+                  {person.role}
+                </p>
 
-              <h2
-                style={Fonts.poppins.medium}
-                className="text-3xl mt-2 transition-all duration-500 group-hover:-translate-y-2"
-              >
-                {person.name}
-              </h2>
-              <button
-                style={Fonts.poppins.medium}
-                className="mt-6 bg-[#FF090C] hover:bg-white hover:text-black px-6 py-3 rounded-full transition-all duration-500 opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 hover:cursor-pointer">
-                Contact →
-              </button>
+                <h2
+                  style={Fonts.poppins.medium}
+                  className="text-2xl lg:text-3xl mt-2 transition-all duration-500 lg:group-hover:-translate-y-2"
+                >
+                  {person.name}
+                </h2>
+                <button
+                  style={Fonts.poppins.medium}
+                  className="mt-5 bg-[#FF090C] hover:bg-white hover:text-black px-6 py-3 rounded-full transition-all duration-500 cursor-pointer opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-6 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+                  Contact →
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

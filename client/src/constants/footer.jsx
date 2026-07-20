@@ -169,11 +169,11 @@ const Footer = () => {
             </span>{" "}
             All rights reserved.
           </p>
-          <p
-            style={Fonts.poppins.medium}
-            className="text-center text-[#ffffff]"
-          >
-            Designed and Developed with ❤️ by{" "}
+          <div
+  style={Fonts.poppins.medium}
+  className="text-center text-white flex items-center justify-center flex-wrap gap-1"
+>
+  <span>Designed and Developed with ❤️ by</span>
             <div ref={popupRef} className="relative inline-block">
               <button
                 onClick={() => setShowPopup(!showPopup)}
@@ -245,7 +245,7 @@ const Footer = () => {
                 </div>
               )}
             </div>
-          </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             <a
               style={Fonts.poppins.medium}

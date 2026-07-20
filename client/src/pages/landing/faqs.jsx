@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import Fonts from "../../utils/fontsconfig";
 import Consultants from "../../assets/images/consultants.jpg";
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const [visible, setVisible] = useState(false);
 
   const qunandanswers = [
     {
@@ -44,37 +43,19 @@ const Faqs = () => {
   const toggleOpen = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  const scrollRef = useRef(null);
-  useEffect(() => {
-    const section = scrollRef.current;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true);
-            observer.unobserve(section);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-    if (section) observer.observe(section);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div
-      ref={scrollRef}
-      className={`flex flex-col md:flex-row mb-20 items-center justify-between gap-15 px-5 py-20 lg:px-10 lg:py-30 bg-white transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      className="flex flex-col md:flex-row mb-20 items-center justify-between gap-15 px-5 py-20 lg:px-10 lg:py-30 bg-white"
     >
       <div className=" w-full md:w-6/12 flex flex-col items-start gap-8">
         <div className="lg:flex lg:flex-col lg:gap-3 lg:w-full lg:items-start flex flex-col items-center justify-center gap-5">
           <h3
-            className="bg-white py-2 px-4 rounded-full lg:w-fit text-center"
-            style={Fonts.poppins.regular}
-          >
-            FREQUENTLY ASKED QUESTIONS
-          </h3>
+          className="bg-white py-2 px-5 rounded-full border border-gray-200 text-sm lg:text-base"
+          style={Fonts.poppins.regular}
+        >
+          INNOVATIVE SOLUTION
+        </h3>
 
           <div>
             <h1
@@ -141,26 +122,6 @@ const Faqs = () => {
           </div>
         ))}
       </div>
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[ref] {
-            flex-direction: column;
-            text-align: center;
-            padding: 2rem 1.5rem;
-          }
-          img {
-            width: 100%;
-            height: auto;
-            margin-top: 1rem;
-          }
-          h1 {
-            font-size: 1.8rem;
-          }
-          p {
-            font-size: 0.95rem;
-          }
-        }
-      `}</style>
     </div>
   );
 };
