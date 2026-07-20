@@ -4,7 +4,11 @@ import Fonts from "../utils/fontsconfig.js";
 import { useNavigate, useLocation } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
-const Navbar = ({ textColor = "white", logo = Logo, bordercolor = "white/30" }) => {
+const Navbar = ({
+  textColor = "white",
+  logo = Logo,
+  bordercolor = "white/30",
+}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,21 +21,25 @@ const Navbar = ({ textColor = "white", logo = Logo, bordercolor = "white/30" }) 
     { name: "About Us", path: "/about-us" },
   ];
 
-  const [active, setActive] = useState(() => {
-    const currentItem = navItems.find(
-      (item) => item.path === location.pathname
-    );
-    return currentItem ? currentItem.name : "Our Story";
-  });
+  const homeRoutes = ["/", "/all-experts", "/expert"];
+
+  const getActiveNav = (pathname) => {
+    if (homeRoutes.some((route) => pathname.startsWith(route))) {
+      return "Home";
+    }
+    const currentItem = navItems.find((item) => item.path === pathname);
+    return currentItem ? currentItem.name : "Home";
+  };
+
+  const [active, setActive] = useState(() => getActiveNav(location.pathname));
 
   useEffect(() => {
     const currentItem = navItems.find(
-      (item) => item.path === location.pathname
+      (item) => item.path === location.pathname,
     );
     if (currentItem) setActive(currentItem.name);
   }, [location.pathname]);
 
-  // Close the mobile menu automatically whenever the route changes
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
@@ -46,20 +54,22 @@ const Navbar = ({ textColor = "white", logo = Logo, bordercolor = "white/30" }) 
     <div className="relative w-full">
       <div className="flex flex-row items-center justify-between w-full gap-4 bg-transparent">
         <img
-          className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-40 object-contain shrink-0"
+          className="h-8 sm:h-20 sm:w-20 md:h-12 lg:h-14 w-auto max-w-40 object-contain shrink-0"
           src={logo}
           alt="Logo"
         />
 
         {/* ------------------- Tablets/PC/Desktop------------------- */}
         <div className="hidden md:flex flex-1 items-center justify-between gap-4">
-          <div className={`flex bg-white/2 backdrop-blur-xs p-2 border-t border-b border-r border-${bordercolor} shadow-2xl rounded-4xl items-center gap-1 lg:gap-3 mx-auto overflow-x-auto`}>
+          <div
+            className={`flex bg-white/2 backdrop-blur-xs p-2 border-t border-b border-r border-${bordercolor} shadow-2xl rounded-4xl items-center gap-1 lg:gap-3 mx-auto overflow-x-auto`}
+          >
             {navItems.map((item) => (
               <button
                 style={Fonts.poppins.light}
                 key={item.name}
                 onClick={() => handleNavClick(item)}
-                className={`text-sm lg:text-base font-poppins font-regular rounded-3xl px-4 lg:px-6 py-2 whitespace-nowrap transition-colors duration-300
+                className={`text-sm cursor-pointer lg:text-base font-poppins font-regular rounded-3xl px-4 lg:px-6 py-2 whitespace-nowrap transition-colors duration-300
                   ${
                     active === item.name
                       ? "bg-[#FF090C] text-[#F2F1FF]"
