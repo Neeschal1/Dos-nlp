@@ -39,14 +39,14 @@ const Services = () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-10 py-16 lg:py-30 w-full">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center gap-5">
         <h3
           className="bg-white py-2 px-4 rounded-full lg:w-fit text-center"
           style={Fonts.poppins.regular}
         >
           INNOVATIVE SOLUTION
         </h3>
-        <h1 style={Fonts.poppins.medium} className="xl:text-4xl text-black">
+        <h1 style={Fonts.poppins.medium} className="xl:text-4xl text-3xl text-black">
           Consulting Services
         </h1>
       </div>
