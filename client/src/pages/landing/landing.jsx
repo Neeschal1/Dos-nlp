@@ -4,6 +4,7 @@ import Statistics from "./statistics";
 import Services from "./services";
 import Faqs from "./faqs";
 import OurPeople from "./ourPeople";
+import Footer from "../../constants/footer";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <Services />
       <Faqs />
       <OurPeople />
+      <Footer />
     </div>
   );
 };
