@@ -54,14 +54,14 @@ const Navbar = ({ textColor = "white", logo = Logo }) => {
           </button>
         ))}
       </div>
-      <div>
+      {/* <div>
         <button
           style={Fonts.poppins.regular}
           className="bg-[#FF090C] text-white px-10 py-4 rounded-4xl hover:bg-[#000000] duration-300 cursor-pointer"
         >
           Apply Now
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

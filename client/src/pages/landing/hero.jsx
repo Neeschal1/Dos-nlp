@@ -19,7 +19,6 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
-    console.log(backgroundImages);
     const handleInterval = setInterval(() => {
       setCurrentImage((previous) => (previous + 1) % backgroundImages.length);
     }, 5000);
@@ -66,13 +65,14 @@ const Hero = () => {
                   style={Fonts.poppins.regular}
                   className="bg-[#FF090C] text-white px-10 py-4 rounded-4xl hover:bg-[#000000] duration-300 cursor-pointer"
                 >
-                  Get Free Career Counselling
+                  Enroll your Admission
                 </button>
                 <button
                   style={Fonts.poppins.regular}
                   className="border border-[#F2F1FF] hover:border-black text-white px-10 py-4 rounded-4xl hover:bg-[#000000] duration-300 cursor-pointer"
                 >
-                  Enroll your Admission
+                  
+                  Get Free Career Counselling
                 </button>
               </div>
             </div>
