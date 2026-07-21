@@ -50,9 +50,9 @@ const SuccessStoriesHero = () => {
               style={Fonts.poppins.medium}
               className="mt-6 text-4xl md:text-5xl lg:text-7xl text-white leading-tight"
             >
-              Our students' success speaks
+              Our Student's Success Speaks
               <br className="hidden md:block" />
-              louder than words.
+              Louder Than Words.
             </h1>
             <h3
               style={Fonts.poppins.regular}
