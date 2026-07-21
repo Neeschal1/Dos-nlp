@@ -39,13 +39,13 @@ const Description = ({ service }) => {
   ];
 
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-10">
+    <section className="bg-[#F2F1FF] py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="flex flex-col items-center text-center">
           <span
-            className="border border-gray-200 rounded-full px-5 py-2 text-sm"
+            className="border border-white bg-white rounded-full px-5 py-2 text-sm"
             style={Fonts.poppins.regular}
           >
             DESCRIPTION
@@ -71,9 +71,9 @@ const Description = ({ service }) => {
           {overview.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-gray-200 bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#FF090C] hover:shadow-xl"
+              className="rounded-3xl border border-white bg-[#F2F1FF] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#FF090C] hover:shadow-xl"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-[#FF090C]">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#FF090C]">
                 {item.icon}
               </div>
 
@@ -106,7 +106,7 @@ const Description = ({ service }) => {
               {service.languageLevels.map((level) => (
                 <span
                   key={level}
-                  className="rounded-full bg-red-50 border border-red-100 px-6 py-3 text-[#FF090C]"
+                  className="rounded-full bg-white border border-white px-6 py-3 text-[#FF090C]"
                   style={Fonts.poppins.medium}
                 >
                   {level}
@@ -127,7 +127,7 @@ const Description = ({ service }) => {
             {service.features.map((feature) => (
               <div
                 key={feature}
-                className="flex items-center gap-4 rounded-2xl border border-gray-200 p-5 transition-all duration-300 hover:bg-[#FF090C] hover:text-white group"
+                className="flex items-center bg-white gap-4 rounded-2xl p-5 transition-all duration-300 hover:bg-[#FF090C] hover:text-white group"
               >
                 <div className="text-[#FF090C] group-hover:text-white">
                   <FiCheckCircle size={22} />

@@ -22,7 +22,7 @@ const Gallery = ({ service }) => {
   }, [service.gallery]);
 
   return (
-    <section className="bg-[#F2F1FF] py-20 px-4 sm:px-6 lg:px-10">
+    <section className="bg-white py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="flex flex-col items-center text-center">

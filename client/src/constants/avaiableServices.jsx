@@ -98,10 +98,10 @@ export const AvailableServices = [
     ],
 
     statistics: {
-      students: "1200+",
-      mentors: "8",
-      successRate: "98%",
-      batches: "50+",
+      students: 1200,
+      mentors: 8,
+      successRate: 98,
+      batches: 50,
     },
 
     cta: {
@@ -205,10 +205,10 @@ export const AvailableServices = [
     ],
 
     statistics: {
-      students: "900+",
-      mentors: "6",
-      successRate: "97%",
-      batches: "35+",
+      students: 900,
+      mentors: 6,
+      successRate: 97,
+      batches: 35,
     },
 
     cta: {
@@ -300,10 +300,10 @@ export const AvailableServices = [
     ],
 
     statistics: {
-      students: "1500+",
-      mentors: "10",
-      successRate: "99%",
-      batches: "60+",
+      students: 1500,
+      mentors: 10,
+      successRate: 99,
+      batches: 60,
     },
 
     cta: {
@@ -395,10 +395,10 @@ export const AvailableServices = [
     ],
 
     statistics: {
-      students: "2000+",
-      mentors: "12",
-      successRate: "98%",
-      batches: "75+",
+      students: 2000,
+      mentors: 12,
+      successRate: 98,
+      batches: 75,
     },
 
     cta: {
