@@ -153,7 +153,7 @@ const OurPeople = () => {
         </div>
         <div className="flex justify-center mt-14">
           <button
-            onClick={() => navigate("/all-experts")}
+            onClick={() => navigate("/home/all-experts")}
             style={Fonts.poppins.medium}
             className="bg-black cursor-pointer text-white px-10 py-4 rounded-full hover:bg-[#FF090C] transition-all duration-300"
           >

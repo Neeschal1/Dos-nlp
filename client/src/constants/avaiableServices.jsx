@@ -10,6 +10,7 @@ export const AvailableServices = [
   {
     id: 1,
     image: GermanLanguage,
+    slug: "LANGUAGE",
     category: "Language",
     title: "German Language",
     subHeading: "Learn German for study, work, and global opportunities.",
@@ -105,26 +106,19 @@ export const AvailableServices = [
   {
     id: 2,
     slug: "korean-language",
-
+    slug: "LANGUAGE",
     image: KoreanLanguage,
-
     category: "Language",
-
     title: "Korean Language",
-
     subHeading: "Master Korean with confidence for career advancement.",
 
     description:
       "Our Korean Language course is designed for students preparing for higher education, employment, or cultural exchange in South Korea. The program develops reading, writing, listening, and speaking skills while preparing students for the TOPIK examination through interactive classroom activities and real-life conversations.",
 
     duration: "6 Months",
-
     mode: "Physical + Online",
-
     level: "Beginner to Advanced",
-
     classTiming: "Morning | Day | Evening",
-
     certificate: true,
 
     languageLevels: [
@@ -218,27 +212,19 @@ export const AvailableServices = [
   // Accounting
   {
     id: 3,
-    slug: "accounting-training",
-
+    slug: "TRAINING",
     image: AccountingTraining,
-
     category: "Professional",
-
     title: "Accounting Training",
-
     subHeading: "Gain industry-ready accounting and finance expertise.",
 
     description:
       "Our Accounting Training program equips students with practical accounting knowledge using modern accounting software and real-world financial scenarios. Students learn bookkeeping, taxation, payroll management, auditing, financial reporting, and computerized accounting to prepare for today's workplace.",
 
     duration: "4 Months",
-
     mode: "Physical + Online",
-
     level: "Basic to Professional",
-
     classTiming: "Morning | Evening",
-
     certificate: true,
 
     languageLevels: [],
@@ -326,29 +312,21 @@ export const AvailableServices = [
   // Computer Training
   {
     id: 4,
-    slug: "computer-training",
-
+    slug: "TRAINING",
     image: ComputerTraining,
-
     category: "IT Training",
-
     title: "Computer Training",
-
     subHeading: "Build practical digital skills for today's workplace.",
 
     description:
       "Our Computer Training program covers essential digital skills required in today's professional environment. Students gain practical experience in Microsoft Office, internet applications, graphic design basics, programming fundamentals, and office productivity tools through project-based learning.",
 
     duration: "3 Months",
-
     mode: "Physical + Online",
-
     level: "Beginner to Advanced",
-
     classTiming: "Morning | Day | Evening",
-
     certificate: true,
-
+    
     languageLevels: [],
 
     gallery: [

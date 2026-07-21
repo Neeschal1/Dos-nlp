@@ -21,32 +21,37 @@ const Navbar = ({
     { name: "About Us", path: "/about-us" },
   ];
 
-  const homeRoutes = ["/", "/all-experts", "/expert", "/available-courses"];
-  const servicesRoutes = ["/available-courses/services"];
-
   const getActiveNav = (pathname) => {
-    if (homeRoutes.some((route) => pathname.startsWith(route))) {
+    if (pathname === "/" || pathname.startsWith("/home")) {
       return "Home";
     }
-    const currentItem = navItems.find((item) => item.path === pathname);
-    return currentItem ? currentItem.name : "Home";
+
+    if (pathname.startsWith("/available-courses")) {
+      return "Our Courses";
+    }
+
+    if (pathname.startsWith("/success-stories")) {
+      return "Success Stories";
+    }
+
+    if (pathname.startsWith("/job-portals")) {
+      return "Job Portals";
+    }
+
+    if (pathname.startsWith("/about-us")) {
+      return "About Us";
+    }
+
+    return "";
   };
 
-  const [active, setActive] = useState(() => getActiveNav(location.pathname));
-
-  useEffect(() => {
-    const currentItem = navItems.find(
-      (item) => item.path === location.pathname,
-    );
-    if (currentItem) setActive(currentItem.name);
-  }, [location.pathname]);
+  const active = getActiveNav(location.pathname);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
   const handleNavClick = (item) => {
-    setActive(item.name);
     navigate(item.path);
     setMenuOpen(false);
   };
