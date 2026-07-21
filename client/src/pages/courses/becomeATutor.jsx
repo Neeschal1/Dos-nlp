@@ -21,7 +21,7 @@ const BecomeATutor = () => {
           </h1>
 
           <p
-            className="text-gray-600 mt-2 max-w-9/12 lg:text-center text-center"
+            className="text-gray-600 mt-2 lg:max-w-9/12 lg:text-center w-full text-center"
             style={Fonts.poppins.regular}
           >
             From professional accounting and IT training to German and Korean

@@ -1,5 +1,5 @@
 import React from "react";
-import Services from "../landing/services";
+import Services from "./services";
 import CoursesHeroSection from "./hero";
 import Footer from "../../constants/footer";
 import BecomeATutor from "./becomeATutor";

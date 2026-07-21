@@ -4,38 +4,15 @@ import GermanLanguage from "../../assets/images/germanLanguageLearning.jpg";
 import KoreanLanguage from "../../assets/images/koreanLanguageLearning.jpg";
 import ComputerTraining from "../../assets/images/computerTraining.jpg";
 import AccountingTraining from "../../assets/images/accountingTrainingClasses.jpg";
+import { useNavigate } from "react-router-dom";
+import { AvailableServices } from "../../constants/avaiableServices";
 
 const Services = () => {
-  const AvailableServices = [
-    {
-      id: 1,
-      image: ComputerTraining,
-      category: "IT Training",
-      title: "Computer Training",
-      subHeading: "Build practical digital skills for today's workplace.",
-    },
-    {
-      id: 2,
-      image: GermanLanguage,
-      category: "Language",
-      title: "German Language",
-      subHeading: "Learn German for study, work, and global opportunities.",
-    },
-    {
-      id: 3,
-      image: KoreanLanguage,
-      category: "Language",
-      title: "Korean Language",
-      subHeading: "Master Korean with confidence for career advancement.",
-    },
-    {
-      id: 4,
-      image: AccountingTraining,
-      category: "Professional",
-      title: "Accounting Training",
-      subHeading: "Gain industry-ready accounting and finance expertise.",
-    },
-  ];
+  const navigation = useNavigate()
+
+  const handleLearnMore = () => {
+    navigation("/available-courses")
+  }
 
   return (
     <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-10 py-16 lg:py-30 w-full">
@@ -84,7 +61,7 @@ const Services = () => {
                 >
                   {service.subHeading}
                 </p>
-                <button className="mt-6 bg-white text-black px-5 py-3 rounded-full font-medium transition-all duration-500 hover:bg-[#FF090C] hover:text-white opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+                <button onClick={handleLearnMore} className="mt-6 bg-white cursor-pointer text-black px-5 py-3 rounded-full font-medium transition-all duration-500 hover:bg-[#FF090C] hover:text-white opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
                   Learn More →
                 </button>
               </div>

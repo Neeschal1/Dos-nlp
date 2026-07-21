@@ -21,7 +21,8 @@ const Navbar = ({
     { name: "About Us", path: "/about-us" },
   ];
 
-  const homeRoutes = ["/", "/all-experts", "/expert"];
+  const homeRoutes = ["/", "/all-experts", "/expert", "/available-courses"];
+  const servicesRoutes = ["/available-courses/services"];
 
   const getActiveNav = (pathname) => {
     if (homeRoutes.some((route) => pathname.startsWith(route))) {
