@@ -2,6 +2,14 @@ import GermanLanguage from "../assets/images/germanLanguage.jpg";
 import KoreanLanguage from "../assets/images/korean.jpg";
 import ComputerTraining from "../assets/images/computerClasses.jpg";
 import AccountingTraining from "../assets/images/accountingTraining.jpg";
+import LanguageLearningGallery1 from "../assets/images/germanLanguageLearning1.jpg"
+import LanguageLearningGallery2 from "../assets/images/germanLanguageLearning2.jpg"
+import LanguageLearningGallery3 from "../assets/images/germanLanguageLearning3.jpg"
+import LanguageLearningGallery4 from "../assets/images/germanLanguageLearning4.jpg"
+import LanguageLearningGallery5 from "../assets/images/germanLanguageLearning5.jpg"
+import LanguageLearningGallery6 from "../assets/images/germanLanguageLearning6.jpg"
+import LanguageLearningGallery7 from "../assets/images/germanLanguageLearning7.jpg"
+import LanguageLearningGallery8 from "../assets/images/germanLanguageLearning8.jpg"
 import Mentor1 from "../assets/images/sundarpandey.jpg"
 import Mentor2 from "../assets/images/chabilaldumre.jpg"
 
@@ -26,7 +34,7 @@ export const AvailableServices = [
     certificate: true,
     languageLevels: ["A1", "A2", "B1", "B2", "C1", "C2"],
 
-    gallery: [GermanLanguage, GermanLanguage, GermanLanguage, GermanLanguage],
+    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
 
     features: [
       "Interactive Classes",
@@ -129,7 +137,7 @@ export const AvailableServices = [
       "Advanced",
     ],
 
-    gallery: [KoreanLanguage, KoreanLanguage, KoreanLanguage, KoreanLanguage],
+    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
 
     features: [
       "Hangul Writing",
@@ -229,12 +237,7 @@ export const AvailableServices = [
 
     languageLevels: [],
 
-    gallery: [
-      AccountingTraining,
-      AccountingTraining,
-      AccountingTraining,
-      AccountingTraining,
-    ],
+    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
 
     features: [
       "Tally ERP",
@@ -326,15 +329,10 @@ export const AvailableServices = [
     level: "Beginner to Advanced",
     classTiming: "Morning | Day | Evening",
     certificate: true,
-    
+
     languageLevels: [],
 
-    gallery: [
-      ComputerTraining,
-      ComputerTraining,
-      ComputerTraining,
-      ComputerTraining,
-    ],
+    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
 
     features: [
       "MS Word",

@@ -1,6 +1,6 @@
 import React from "react";
 import Fonts from "../../utils/fontsconfig";
-import GermanLanguage from "../../assets/images/germanLanguageLearning.jpg";
+import GermanLanguage from "../../assets/images/germanLanguage.jpg";
 import KoreanLanguage from "../../assets/images/koreanLanguageLearning.jpg";
 import ComputerTraining from "../../assets/images/computerTraining.jpg";
 import AccountingTraining from "../../assets/images/accountingTrainingClasses.jpg";
