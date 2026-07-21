@@ -10,7 +10,6 @@ const Courses = () => {
     <div className="flex flex-1 w-full flex-col bg-[#F2F1FF]">
       <CoursesHeroSection />
       <Services />
-      {/* <GermanServices /> */}
       <BecomeATutor />
       <Footer />
     </div>

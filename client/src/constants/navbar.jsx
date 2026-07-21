@@ -68,7 +68,7 @@ const Navbar = ({
         {/* ------------------- Tablets/PC/Desktop------------------- */}
         <div className="hidden md:flex flex-1 items-center justify-between gap-4">
           <div
-            className={`flex bg-white/2 backdrop-blur-xs p-2 border-t border-b border-r border-${bordercolor} shadow-2xl rounded-4xl items-center gap-1 lg:gap-3 mx-auto overflow-x-auto`}
+            className={`flex bg-black/2 backdrop-blur-sm p-2 border-t border-b border-r border-${bordercolor} shadow-2xl rounded-4xl items-center gap-1 lg:gap-3 mx-auto overflow-x-auto`}
           >
             {navItems.map((item) => (
               <button
