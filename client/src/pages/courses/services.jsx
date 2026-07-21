@@ -13,7 +13,7 @@ const Services = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-10 py-16 lg:py-30 w-full">
+    <div id="courses-section" className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-10 py-16 lg:py-30 w-full">
       <div className="flex flex-col items-center gap-5">
         <h3
           className="bg-white py-2 px-4 rounded-full lg:w-fit text-center"

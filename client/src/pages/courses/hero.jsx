@@ -45,7 +45,7 @@ const CoursesHeroSection = () => {
             style={Fonts.poppins.regular}
             onClick={() => {
               document
-                .getElementById("stories-section")
+                .getElementById("courses-section")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="mt-8 bg-[#FF090C] text-white px-8 lg:px-10 py-4 rounded-full hover:bg-black transition-all duration-300 cursor-pointer"
