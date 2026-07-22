@@ -17,7 +17,7 @@ const Navbar = ({
     { name: "Home", path: "/" },
     { name: "Success Stories", path: "/success-stories" },
     { name: "Our Courses", path: "/available-courses" },
-    { name: "Job Portals", path: "/job-portals" },
+    { name: "Contact Us", path: "/contact-us" },
     { name: "About Us", path: "/about-us" },
   ];
 
@@ -34,12 +34,12 @@ const Navbar = ({
       return "Success Stories";
     }
 
-    if (pathname.startsWith("/job-portals")) {
-      return "Job Portals";
-    }
-
     if (pathname.startsWith("/about-us")) {
       return "About Us";
+    }
+
+    if (pathname.startsWith("/contact-us")) {
+      return "Contact Us";
     }
 
     return "";

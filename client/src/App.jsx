@@ -8,6 +8,7 @@ import Aboutus from "./pages/aboutus/aboutus";
 import AllExperts from "./pages/allExperts/allExperts";
 import SingleServices from "./pages/services/singleService";
 import ScrollToTop from "./constants/scroll";
+import ContactUs from "./pages/contacts/contactUs";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/job-portals" element={<Portals />} />
         <Route path="/about-us" element={<Aboutus />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/home/all-experts" element={<AllExperts />} />
         <Route path="/available-courses" element={<Courses />} />
         <Route

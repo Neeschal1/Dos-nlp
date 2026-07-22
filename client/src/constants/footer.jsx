@@ -11,7 +11,6 @@ import {
 const quickLinks = [
   { name: "Home", url: "/" },
   { name: "Success Stories", url: "/success-stories" },
-  { name: "Portals", url: "/job-portals" },
   { name: "Courses", url: "/available-courses" },
   { name: "About us", url: "/about-us" },
 ];

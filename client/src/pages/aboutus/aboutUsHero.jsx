@@ -21,14 +21,12 @@ const AboutUsHero = () => {
                   style={Fonts.poppins.medium}
                   className="text-7xl text-white"
                 >
-                  Welcome to DOS NEPAL :)
+                  Empowering Learning Together
                 </h1>
                 <h3
                   style={Fonts.poppins.regular}
-                  className="text-lg text-white pt-3"
-                >
-                  Professional Accounting Training | German Language | Korean
-                  Language | IT Training | Job Placement Services
+                  className="text-lg text-white lg:w-10/12 text-center pt-3"
+                >At DOS-NLP, we believe quality education creates limitless opportunities. With experienced instructors, practical learning methods, and personalized guidance, we help students master accounting, computer skills, and international languages including German, Korean, and English. Together, we prepare learners with the confidence and skills needed to achieve academic, professional, and global success.
                 </h3>
               </div>
             </div>
