@@ -4,6 +4,7 @@ import Statistics from './statistics'
 import Footer from '../../constants/footer'
 import OurPeople from './ourPeople'
 import OurMission from './ourMission'
+import OurVision from './ourVision'
 
 const Aboutus = () => {
   return (
@@ -11,6 +12,7 @@ const Aboutus = () => {
       <AboutUsHero />
       <Statistics />
       <OurMission />
+      <OurVision />
       <OurPeople />
       <Footer />
     </div>
