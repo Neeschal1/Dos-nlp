@@ -12,6 +12,7 @@ const quickLinks = [
   { name: "Home", url: "/" },
   { name: "Success Stories", url: "/success-stories" },
   { name: "Courses", url: "/available-courses" },
+  { name: "Contact us", url: "/contact-us" },
   { name: "About us", url: "/about-us" },
 ];
 
