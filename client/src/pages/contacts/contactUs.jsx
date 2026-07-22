@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ContactUsHero from "./contactUsHero";
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
-  )
-}
+    <div className="flex flex-1 w-full flex-col bg-[#F2F1FF]">
+      <ContactUsHero />
+    </div>
+  );
+};
 
-export default ContactUs
+export default ContactUs;

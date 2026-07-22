@@ -1,6 +1,7 @@
 import React from "react";
 import Fonts from "../../utils/fontsconfig";
 import IntroVideo from "../../assets/video/video.mp4";
+import Thumbnail from "../../assets/images/thumbnail.webp"
 
 const HowWeDo = () => {
   return (
@@ -30,8 +31,8 @@ const HowWeDo = () => {
           Communication and Expert Execution, at every stage.
         </p>
       <div className="w-full max-w-4xl mt-6 mb-20 mx-auto rounded-xl overflow-hidden">
-        <video className="w-full h-auto" controls preload="metadata">
-          <source src={IntroVideo} type="video/mp4" />
+        <video className="w-full h-auto" controls preload="metadata" poster={Thumbnail}>
+          <source src={IntroVideo} type="video/mp4"/>
           Your browser does not support the video. So sorry :(
         </video>
       </div>
