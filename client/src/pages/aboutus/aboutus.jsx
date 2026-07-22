@@ -5,6 +5,7 @@ import Footer from '../../constants/footer'
 import OurPeople from './ourPeople'
 import OurMission from './ourMission'
 import OurVision from './ourVision'
+import HowWeDo from './howWeDo'
 
 const Aboutus = () => {
   return (
@@ -13,6 +14,7 @@ const Aboutus = () => {
       <Statistics />
       <OurMission />
       <OurVision />
+      <HowWeDo />
       <OurPeople />
       <Footer />
     </div>
