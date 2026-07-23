@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import Fonts from "../../utils/fontsconfig";
 
-import Student1 from "../../assets/images/student1.jpg";
-import Student2 from "../../assets/images/student2.jpg";
-import Student3 from "../../assets/images/student3.jpg";
-import Student4 from "../../assets/images/student4.jpg";
-import Student5 from "../../assets/images/student5.jpg";
-import Student6 from "../../assets/images/student6.jpg";
-import Student7 from "../../assets/images/student7.jpg";
-
 const Stories = () => {
   const studentsStories = [
     {
       id: 1,
-      image: Student1,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Jessica Tamang",
       title: "Accounting Training",
       address: "Millanchowk, Butwal",
@@ -22,7 +14,7 @@ const Stories = () => {
     },
     {
       id: 2,
-      image: Student2,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Emily Smith",
       title: "German Language",
       address: "Millanchowk, Butwal",
@@ -31,7 +23,7 @@ const Stories = () => {
     },
     {
       id: 3,
-      image: Student3,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "David Lee",
       title: "Computer Training",
       address: "Millanchowk, Butwal",
@@ -40,7 +32,7 @@ const Stories = () => {
     },
     {
       id: 4,
-      image: Student4,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Sujan Sharma",
       title: "Korean Language",
       address: "Millanchowk, Butwal",
@@ -49,7 +41,7 @@ const Stories = () => {
     },
     {
       id: 5,
-      image: Student5,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Rita KC",
       title: "Accounting Training",
       address: "Millanchowk, Butwal",
@@ -58,7 +50,7 @@ const Stories = () => {
     },
     {
       id: 6,
-      image: Student6,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Aakash Sharma",
       title: "IT Training",
       address: "Millanchowk, Butwal",
@@ -67,7 +59,7 @@ const Stories = () => {
     },
     {
       id: 7,
-      image: Student7,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Aakash Sharma",
       title: "IT Training",
       address: "Millanchowk, Butwal",
@@ -76,67 +68,13 @@ const Stories = () => {
     },
     {
       id: 8,
-      image: Student1,
+      image: "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
       name: "Jessica Tamang",
       title: "Accounting Training",
       address: "Millanchowk, Butwal",
       description:
         "Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills. Completed our Accounting Training program with distinction and secured a full-time position in a reputed finance company. The practical sessions, experienced instructors, and career guidance helped me develop confidence and industry-ready skills.",
-    },
-    {
-      id: 9,
-      image: Student2,
-      name: "Emily Smith",
-      title: "German Language",
-      address: "Millanchowk, Butwal",
-      description:
-        "After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective. After completing the German Language course, I achieved B2 proficiency and successfully received admission to a university in Germany. The structured curriculum and experienced teachers made learning enjoyable and effective.",
-    },
-    {
-      id: 10,
-      image: Student3,
-      name: "David Lee",
-      title: "Computer Training",
-      address: "Millanchowk, Butwal",
-      description:
-        "The Computer Training course provided practical experience in modern software and office applications. Within a few months, I secured my first internship at a software company.",
-    },
-    {
-      id: 11,
-      image: Student4,
-      name: "Sujan Sharma",
-      title: "Korean Language",
-      address: "Millanchowk, Butwal",
-      description:
-        "Preparing for TOPIK was challenging, but the dedicated instructors and supportive environment helped me achieve my target score and begin my career in South Korea.",
-    },
-    {
-      id: 12,
-      image: Student5,
-      name: "Rita KC",
-      title: "Accounting Training",
-      address: "Millanchowk, Butwal",
-      description:
-        "The hands-on accounting projects and professional mentorship helped me gain practical experience. I received multiple job offers immediately after completing the course.",
-    },
-    {
-      id: 13,
-      image: Student6,
-      name: "Aakash Sharma",
-      title: "IT Training",
-      address: "Millanchowk, Butwal",
-      description:
-        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
-    },
-    {
-      id: 14,
-      image: Student7,
-      name: "Aakash Sharma",
-      title: "IT Training",
-      address: "Millanchowk, Butwal",
-      description:
-        "Learning programming and real-world development practices at DOS Multi Services gave me the confidence to pursue a software engineering career. Today I work as a Junior Developer.",
-    },
+    }
   ];
 
   const [visibleCount, setVisibleCount] = useState(6);
@@ -147,18 +85,26 @@ const Stories = () => {
   return (
     <div id="stories-section" className="flex flex-1 bg-white items-center justify-center flex-col w-full py-16">
       <div className="flex flex-col items-center gap-5 mb-12">
+        <div className="flex flex-col items-center gap-5">
         <h3
           className="bg-[#F2F1FF] py-2 px-4 rounded-full lg:w-fit text-center"
           style={Fonts.poppins.regular}
         >
-          EMPOWERING FUTURE PROFESSIONALS
+          SUCCESS STORIES
         </h3>
         <h1
           style={Fonts.poppins.medium}
           className="xl:text-4xl text-3xl text-black text-center"
         >
-          Transforming Skills into Successful Careers
+          Celebrating Student Achievements
         </h1>
+      </div>
+      <p
+        style={Fonts.poppins.regular}
+        className="text-sm text-black/90 text-center leading-relaxed"
+      >
+       Discover the inspiring journeys of our students who turned their ambitions into achievements. Their success reflects the quality of our training and commitment to career growth.
+      </p>
       </div>
 
       <div className="grid bg-white grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-6 gap-6 lg:gap-8 w-full">

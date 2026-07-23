@@ -2,14 +2,6 @@ import GermanLanguage from "../assets/images/germanLanguage.jpg";
 import KoreanLanguage from "../assets/images/korean.jpg";
 import ComputerTraining from "../assets/images/computerClasses.jpg";
 import AccountingTraining from "../assets/images/accountingTraining.jpg";
-import LanguageLearningGallery1 from "../assets/images/germanLanguageLearning1.jpg"
-import LanguageLearningGallery2 from "../assets/images/germanLanguageLearning2.jpg"
-import LanguageLearningGallery3 from "../assets/images/germanLanguageLearning3.jpg"
-import LanguageLearningGallery4 from "../assets/images/germanLanguageLearning4.jpg"
-import LanguageLearningGallery5 from "../assets/images/germanLanguageLearning5.jpg"
-import LanguageLearningGallery6 from "../assets/images/germanLanguageLearning6.jpg"
-import LanguageLearningGallery7 from "../assets/images/germanLanguageLearning7.jpg"
-import LanguageLearningGallery8 from "../assets/images/germanLanguageLearning8.jpg"
 import Mentor1 from "../assets/images/sundarpandey.jpg"
 import Mentor2 from "../assets/images/chabilaldumre.jpg"
 
@@ -34,7 +26,16 @@ export const AvailableServices = [
     certificate: true,
     languageLevels: ["A1", "A2", "B1", "B2", "C1", "C2"],
 
-    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
+    gallery: [    
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798924/IMG-20251128-WA0093_jhware.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804385961_orlnkk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798910/20251208_145217_blabjr.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+  ],
 
     features: [
       "Interactive Classes",
@@ -163,7 +164,16 @@ export const AvailableServices = [
       "Advanced",
     ],
 
-    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
+    gallery: [    
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798924/IMG-20251128-WA0093_jhware.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804385961_orlnkk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798910/20251208_145217_blabjr.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+  ],
 
     features: [
       "Hangul Writing",
@@ -312,7 +322,16 @@ export const AvailableServices = [
 
     languageLevels: [],
 
-    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
+    gallery: [    
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798924/IMG-20251128-WA0093_jhware.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804385961_orlnkk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798910/20251208_145217_blabjr.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+  ],
 
     features: [
       "Tally ERP",
@@ -446,7 +465,16 @@ export const AvailableServices = [
 
     languageLevels: [],
 
-    gallery: [LanguageLearningGallery1, LanguageLearningGallery2, LanguageLearningGallery3, LanguageLearningGallery4, LanguageLearningGallery5, LanguageLearningGallery6, LanguageLearningGallery7, LanguageLearningGallery8],
+    gallery: [    
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798924/IMG-20251128-WA0093_jhware.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804385961_orlnkk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798910/20251208_145217_blabjr.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
+  ],
 
     features: [
       "MS Word",

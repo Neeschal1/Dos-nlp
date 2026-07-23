@@ -27,7 +27,7 @@ const OurPeople = ({colorState}) => {
       description:
         "Specializes in financial accounting, taxation, and practical bookkeeping with years of experience training aspiring accounting professionals.",
       address: "Milanchowk, Butwal, Nepal",
-      phone: "+977 9800000001",
+      phone: "+977 9867507700",
       email: "sundar@dosnpl.com",
       facebook: "https://facebook.com/sushantkc",
       instagram: "https://instagram.com/sushantkc",
@@ -42,7 +42,7 @@ const OurPeople = ({colorState}) => {
       role: "MD",
       description: "10+ years Exp as Finance Controller",
       address: "Milanchowk, Butwal, Nepal",
-      phone: "+977 9800000002",
+      phone: "+977 9857058707",
       email: "sajjan@dosmultiservices.com",
       facebook: "https://facebook.com/sajjanraj",
       instagram: "https://instagram.com/sajjanraj",
