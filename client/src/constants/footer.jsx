@@ -17,7 +17,7 @@ const quickLinks = [
 
 const socialLinks = [
   { name: "Facebook", url: "facebook.com/dosmultiservices" },
-  { name: "Instagram", url: "/" },
+  { name: "Instagram", url: "https://www.instagram.com/dospatbtl?igsh=MTdiMDkyN3hiZHRneQ==" },
   { name: "TikTok", url: "/" },
   { name: "Twitter", url: "/" },
   { name: "Linkedin", url: "/" },

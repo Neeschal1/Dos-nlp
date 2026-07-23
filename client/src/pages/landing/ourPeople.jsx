@@ -145,7 +145,7 @@ const OurPeople = ({colorState}) => {
             style={Fonts.poppins.medium}
             className="bg-black cursor-pointer text-white px-10 py-4 rounded-full hover:bg-[#FF090C] transition-all duration-300"
           >
-            View All Experts
+            View All Experts and Staffs
           </button>}
         </div>
         {selectedExpert && (

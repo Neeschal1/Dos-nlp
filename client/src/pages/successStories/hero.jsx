@@ -9,9 +9,10 @@ const SuccessStoriesHero = () => {
   const [backgroundImage, setBackgroundImage] = useState(0);
 
   const SuccessStudentsImages = [
-    SuccessStudents1,
-    SuccessStudents2,
-    SuccessStudents3,
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804165780_tic4sn.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804157640_ykwfyd.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798919/IMG-20250713-WA0003_biuhxs.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/FB_IMG_1751803765410_judbjz.jpg"
   ];
 
   useEffect(() => {
