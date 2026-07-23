@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Fonts from "../utils/fontsconfig";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaGlobe,
+  FaMapMarkerAlt,
+  FaMailBulk,
+  FaGrin,
+  FaMobileAlt,
 } from "react-icons/fa";
 
 const quickLinks = [
@@ -17,10 +16,34 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", url: "/" },
+  { name: "Facebook", url: "facebook.com/dosmultiservices" },
   { name: "Instagram", url: "/" },
+  { name: "TikTok", url: "/" },
   { name: "Twitter", url: "/" },
   { name: "Linkedin", url: "/" },
+];
+
+const Contacts = [
+  {
+    name: "Location",
+    value: "Milanchowk, Butwal, Nepal",
+    icon: <FaMapMarkerAlt />,
+  },
+  {
+    name: "Email",
+    value: "info@dosmultiservices.com",
+    icon: <FaMailBulk />,
+  },
+  {
+    name: "Reception",
+    value: "+977 9800000000",
+    icon: <FaGrin />,
+  },
+  {
+    name: "Phone Number",
+    value: "+977 9812345678",
+    icon: <FaMobileAlt />,
+  },
 ];
 
 const supportLinks = [
@@ -30,7 +53,7 @@ const supportLinks = [
 ];
 
 const Footer = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [selectedContact, setSelectedContact] = useState(null);
   const popupRef = useRef(null);
 
   useEffect(() => {
@@ -90,7 +113,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-20 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-20 mt-16">
           <div>
             <h3
               style={Fonts.poppins.medium}
@@ -137,6 +160,47 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+          <div className="flex items-center flex-col">
+            <h3
+              style={Fonts.poppins.medium}
+              className="text-base font-semibold mb-4"
+            >
+              Contacts
+            </h3>
+            <ul className="flex flex-col items-center gap-3 w-full">
+              {Contacts.map((contact, index) => (
+                <li
+                  key={index}
+                  className="flex items-center cursor-pointer justify-center gap-3"
+                >
+                  <button
+                    onClick={() =>
+                      setSelectedContact(
+                        selectedContact === index ? null : index,
+                      )
+                    }
+                    className="text-sm cursor-pointer text-[#B8B8B8] hover:text-white duration-300"
+                    style={Fonts.poppins.medium}
+                  >
+                    {contact.name}
+                  </button>
+
+                  {selectedContact === index && (
+                    <div className="flex items-center gap-2 animate-in fade-in duration-300">
+                      <span className="text-white text-lg">{contact.icon}</span>
+
+                      <span
+                        style={Fonts.poppins.regular}
+                        className="text-[#F2F1FF] text-sm"
+                      >
+                        {contact.value}
+                      </span>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="flex items-end flex-col">
             <h3
               style={Fonts.poppins.medium}
@@ -169,83 +233,7 @@ const Footer = () => {
             </span>{" "}
             All rights reserved.
           </p>
-          <div
-  style={Fonts.poppins.medium}
-  className="text-center text-white flex items-center justify-center flex-wrap gap-1"
->
-  <span>Designed and Developed with ❤️ by</span>
-            <div ref={popupRef} className="relative inline-block">
-              <button
-                onClick={() => setShowPopup(!showPopup)}
-                className="font-semibold text-[16px] hover:underline"
-              >
-                Nischal Pokharel
-              </button>
 
-              {showPopup && (
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 rounded-2xl bg-white shadow-2xl p-3 z-50 animate-in fade-in zoom-in duration-300">
-                  <h3 className="text-black font-semibold mb-3">
-                    Connect with me
-                  </h3>
-
-                  <a
-                    href="https://creanees.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setShowPopup(false)}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100"
-                  >
-                    <FaGlobe className="text-red-500" />
-                    <span className="text-black">Portfolio</span>
-                  </a>
-
-                  <a
-                    href="https://github.com/Neeschal1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setShowPopup(false)}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100"
-                  >
-                    <FaGithub className="text-black" />
-                    <span className="text-black">GitHub</span>
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/nischal-pokhrel-6543632b7/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setShowPopup(false)}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100"
-                  >
-                    <FaLinkedin className="text-blue-600" />
-                    <span className="text-black">LinkedIn</span>
-                  </a>
-
-                  <a
-                    href="https://www.facebook.com/nischal.pokharel.598234"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setShowPopup(false)}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100"
-                  >
-                    <FaFacebook className="text-blue-500" />
-                    <span className="text-black">Facebook</span>
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/nees_c_hal/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setShowPopup(false)}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100"
-                  >
-                    <FaInstagram className="text-pink-500" />
-                    <span className="text-black">Instagram</span>
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             <a
               style={Fonts.poppins.medium}

@@ -5,12 +5,12 @@ import Users from "../../assets/images/users.png";
 
 const Hero = () => {
   const backgroundImages = [
-    import.meta.env.VITE_HERO_IMAGE_1,
-    import.meta.env.VITE_HERO_IMAGE_2,
-    import.meta.env.VITE_HERO_IMAGE_3,
-    import.meta.env.VITE_HERO_IMAGE_4,
-    import.meta.env.VITE_HERO_IMAGE_5,
-    import.meta.env.VITE_HERO_IMAGE_6,
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798929/img_rdjrlk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798924/IMG-20251128-WA0093_jhware.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798917/FB_IMG_1751804385961_orlnkk.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798910/20251208_145217_blabjr.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798914/20251128_140107_hctwx4.jpg",
+    "https://res.cloudinary.com/dlzx671ck/image/upload/v1784798916/FB_IMG_1751804065936_xoeg2b.jpg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
