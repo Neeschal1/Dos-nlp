@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-import HeroSectionImage from "./../../assets/images/hero.jpg";
 import Navbar from "../../constants/navbar";
 import Fonts from "../../utils/fontsconfig";
 import Users from "../../assets/images/users.png";
-import KoreanLanguage from "../../assets/images/koreanLanguage.jpg";
-import GermanLanguage from "../../assets/images/germanLanguage.jpg";
-import ComputerClasses from "../../assets/images/computerClasses.jpg";
-import AccountingTraining from "../../assets/images/accountingTraining.jpg";
 
 const Hero = () => {
   const backgroundImages = [
-    HeroSectionImage,
-    KoreanLanguage,
-    GermanLanguage,
-    ComputerClasses,
-    AccountingTraining,
+    import.meta.env.VITE_HERO_IMAGE_1,
+    import.meta.env.VITE_HERO_IMAGE_2,
+    import.meta.env.VITE_HERO_IMAGE_3,
+    import.meta.env.VITE_HERO_IMAGE_4,
+    import.meta.env.VITE_HERO_IMAGE_5,
+    import.meta.env.VITE_HERO_IMAGE_6,
   ];
+
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -35,10 +32,10 @@ const Hero = () => {
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
             index === currentImage ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url('${image}')` }}
         />
       ))}
-
+      <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 w-full min-h-screen flex flex-col bg-black/30 p-3">
         <Navbar />
 
