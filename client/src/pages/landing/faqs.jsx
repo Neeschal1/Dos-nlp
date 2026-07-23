@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import Fonts from "../../utils/fontsconfig";
-import Consultants from "../../assets/images/consultants.jpg";
+import Consultants from "../../assets/images/faqsBanner.jpg";
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -78,7 +78,7 @@ const Faqs = () => {
         </div>
         <div className="lg:w-full lg:flex justify-center items-center hidden">
           <img
-            src={import.meta.env.VITE_FAQS_IMAGE}
+            src={Consultants}
             alt="FAQ Illustration"
             className="rounded-3xl w-full h-[60vh] object-cover shadow-lg hover:scale-105 transition-transform duration-700 "
           />

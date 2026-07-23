@@ -6,83 +6,71 @@ import {
   FaXTwitter,
   FaLocationDot,
   FaPhone,
-  FaEnvelope,
+  FaEnvelope, 
 } from "react-icons/fa6";
-import Person1 from "../../assets/images/person1.jpg";
-import Person2 from "../../assets/images/person2.jpg";
-import Person3 from "../../assets/images/person3.jpg";
-import Person4 from "../../assets/images/person4.jpg";
+import { IoIosLink } from "react-icons/io";
+import Person1 from "../../assets/images/MrSundarPandey.jpg";
+import Person2 from "../../assets/images/chabilaldumre.jpg"
+import Person3 from "../../assets/images/NischalPokharel.jpg";
 import Fonts from "../../utils/fontsconfig";
 import { useNavigate } from "react-router-dom";
 
-const OurPeople = () => {
+const OurPeople = ({colorState}) => {
   const [selectedExpert, setSelectedExpert] = useState(null);
   const navigate = useNavigate()
   const ourPerson = [
     {
       id: 1,
       image: Person1,
-      name: "Sushant KC",
-      role: "Senior Accounting Trainer",
+      name: "Mr. Sundar Pandey",
+      role: "MD",
       description:
         "Specializes in financial accounting, taxation, and practical bookkeeping with years of experience training aspiring accounting professionals.",
       address: "Milanchowk, Butwal, Nepal",
       phone: "+977 9800000001",
-      email: "sushant@dosmultiservices.com",
+      email: "sundar@dosnpl.com",
       facebook: "https://facebook.com/sushantkc",
       instagram: "https://instagram.com/sushantkc",
       linkedin: "https://linkedin.com/in/sushantkc",
+      portfolioState: false,
       twitter: "https://twitter.com/sushantkc",
     },
     {
       id: 2,
       image: Person2,
-      name: "Sajjan Raj Vaidhya",
-      role: "German Language Instructor",
-      description:
-        "Experienced German language trainer helping students prepare for international education, career opportunities, and Goethe examinations.",
+      name: "Mr. Chabi Lal Dumre",
+      role: "MD",
+      description: "10+ years Exp as Finance Controller",
       address: "Milanchowk, Butwal, Nepal",
       phone: "+977 9800000002",
       email: "sajjan@dosmultiservices.com",
       facebook: "https://facebook.com/sajjanraj",
       instagram: "https://instagram.com/sajjanraj",
       linkedin: "https://linkedin.com/in/sajjanraj",
+      portfolioState: false,
       twitter: "https://twitter.com/sajjanraj",
     },
     {
       id: 3,
       image: Person3,
-      name: "Miruna Magar",
-      role: "Korean Language Instructor",
+      name: "Nischal Pokharel",
+      role: "IT Engineer",
       description:
-        "Passionate Korean language educator specializing in TOPIK preparation and conversational Korean for students planning to study or work abroad.",
-      address: "Milanchowk, Butwal, Nepal",
-      phone: "+977 9800000003",
-      email: "miruna@dosmultiservices.com",
-      facebook: "https://facebook.com/mirunamagar",
-      instagram: "https://instagram.com/mirunamagar",
-      linkedin: "https://linkedin.com/in/mirunamagar",
-      twitter: "https://twitter.com/mirunamagar",
-    },
-    {
-      id: 4,
-      image: Person4,
-      name: "Aayusha Kadel",
-      role: "Computer & IT Trainer",
-      description:
-        "Expert in computer fundamentals, office applications, and practical IT skills, preparing students for today's digital workplace.",
-      address: "Milanchowk, Butwal, Nepal",
-      phone: "+977 9800000004",
-      email: "aayusha@dosmultiservices.com",
-      facebook: "https://facebook.com/aayushakadel",
-      instagram: "https://instagram.com/aayushakadel",
-      linkedin: "https://linkedin.com/in/aayushakadel",
-      twitter: "https://twitter.com/aayushakadel",
-    },
+        "Generative AI Developer with expertise in full-stack web/mobile applications utilizing Django REST APIs and modern frontend technologies, backed by a strong foundation in Python and JavaScript.",
+      address: "Kapilvastu-09, Kapilvastu, Nepal",
+      phone: "+977 9747397641 / +977 9867418552",
+      email: "neeschalpok04@gmail.com",
+      facebook: "https://www.facebook.com/nischal.pokharel.598234",
+      instagram: "https://www.instagram.com/nees_c_hal/",
+      linkedin: "https://www.linkedin.com/in/nischal-pokhrel-6543632b7/",
+      twitter: "https://x.com/nischal45898",
+      portfolioState: true,
+      portfolio: "https://creanees.vercel.app/"
+    }
   ];
 
   return (
-    <section className="py-12 lg:py-20 bg-white lg:-mt-20 -mt-20">
+    <section className={`py-12 lg:py-20 bg-${colorState ? "#colorState" : "white"} lg:-mt-20 -mt-20`}>
       <div
         id="leadingExperts"
         className="flex flex-col items-center text-center px-4"
@@ -111,8 +99,8 @@ const OurPeople = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 lg:mt-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 lg:items-center lg:w-full sm:px-6 lg:px-8 mt-12 lg:mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-full lg:items-center xl:grid-cols-3 gap-6 lg:gap-8">
           {ourPerson.map((person) => (
             <div
               key={person.id}
@@ -152,13 +140,13 @@ const OurPeople = () => {
           ))}
         </div>
         <div className="flex justify-center mt-14">
-          <button
+          {colorState ? null : <button
             onClick={() => navigate("/home/all-experts")}
             style={Fonts.poppins.medium}
             className="bg-black cursor-pointer text-white px-10 py-4 rounded-full hover:bg-[#FF090C] transition-all duration-300"
           >
             View All Experts
-          </button>
+          </button>}
         </div>
         {selectedExpert && (
           <div
@@ -231,7 +219,7 @@ const OurPeople = () => {
                         </h4>
                         <a
                           href={`tel:${selectedExpert.phone}`}
-                          className="text-gray-600 hover:text-[#FF090C]"
+                          className="text-gray-600"
                           style={Fonts.poppins.regular}
                         >
                           {selectedExpert.phone}
@@ -248,7 +236,7 @@ const OurPeople = () => {
                         </h4>
                         <a
                           href={`mailto:${selectedExpert.email}`}
-                          className="text-gray-600 hover:text-[#FF090C]"
+                          className="text-gray-600"
                           style={Fonts.poppins.regular}
                         >
                           {selectedExpert.email}
@@ -296,6 +284,14 @@ const OurPeople = () => {
                       >
                         <FaXTwitter size={18} />
                       </a>
+                      {selectedExpert.portfolioState ? <a
+                        href={selectedExpert.portfolio }
+                        target="_blank"
+                        rel="noreferrer"
+                        className="h-12 w-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300"
+                      >
+                        <IoIosLink  size={18} />
+                      </a> : null}
                     </div>
                   </div>
                 </div>
