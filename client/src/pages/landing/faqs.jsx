@@ -78,7 +78,7 @@ const Faqs = () => {
         </div>
         <div className="lg:w-full lg:flex justify-center items-center hidden">
           <img
-            src={Consultants}
+            src={import.meta.env.VITE_FAQS_IMAGE}
             alt="FAQ Illustration"
             className="rounded-3xl w-full h-[60vh] object-cover shadow-lg hover:scale-105 transition-transform duration-700 "
           />
