@@ -36,12 +36,12 @@ const Contacts = [
   },
   {
     name: "Reception",
-    value: "+977 9800000000",
+    value: "+977-9800000000",
     icon: <FaGrin />,
   },
   {
     name: "Phone Number",
-    value: "+977 9812345678",
+    value: "+977-9812345678",
     icon: <FaMobileAlt />,
   },
 ];
@@ -113,7 +113,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-20 mt-16">
+        <div className="grid grid-cols-2 sm:items-start sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-20 mt-16">
           <div>
             <h3
               style={Fonts.poppins.medium}
@@ -137,18 +137,18 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex items-center flex-col">
+          <div className="flex items-end lg:items-center flex-col">
             <h3
               style={Fonts.poppins.medium}
               className="text-base font-semibold mb-4"
             >
               Social Media
             </h3>
-            <ul className="flex flex-col gap-2 text-center">
+            <ul className="flex flex-col gap-2 items-end text-right lg:text-center">
               {socialLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="text-sm text-[#B8B8B8] hover:text-white duration-600"
+                  className="text-sm text-[#B8B8B8] hover:text-white w-full duration-600"
                 >
                   <a
                     style={{ whiteSpace: "nowrap", ...Fonts.poppins.medium }}
@@ -160,14 +160,14 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex items-center flex-col">
+          <div className="flex items-start lg:items-center flex-col">
             <h3
               style={Fonts.poppins.medium}
               className="text-base font-semibold mb-4"
             >
               Contacts
             </h3>
-            <ul className="flex flex-col items-center gap-3 w-full">
+            <ul className="flex flex-col items-start lg:items-center gap-3 w-full">
               {Contacts.map((contact, index) => (
                 <li
                   key={index}
